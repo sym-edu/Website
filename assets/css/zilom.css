@@ -171,7 +171,17 @@ ul {
     }
 }
 
+/* Hero Banner Fixes 
+.hero-banner {
+	position: absolute;
+}*/
 
+.hero-banner {
+	/* position: absolute; */
+	padding: 50%;
+	transform: translate(0, -50%);
+	top: 50%;
+}
 
 
 .bootstrap-select .btn-light:not(:disabled):not(.disabled).active,
