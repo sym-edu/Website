@@ -89,3 +89,7 @@ path.two {
         fill: white;
     }
 }
+
+#promo-play {
+	opacity: 0;
+}

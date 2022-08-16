@@ -171,11 +171,11 @@
                         <!-- <div class="image-layer-overlay"></div> -->
 						<div class="t" style="padding-top: 50%; padding-left: 50%; z-index: 1;"></div>
 						<div class="container hero-banner" style="position: absolute;">
-							<div class="video-one__box wow fadeInUp" id="promo-play" data-wow-delay="0ms" data-wow-duration="1500ms">
+							<div class="video-one__box" id="promo-play">
                             <div class="row">
 								<!-- <div class="col-xl-4" style="padding-bottom: 35px"> -->
                                 <div class="col-lg-12">
-								<div class="icon wow zoomIn" data-wow-delay="300ms" data-wow-duration="1500ms">
+								<div class="icon">
 									<a class="video-popup" title="PROMO - ABOUT US" href="https://www.youtube.com/watch?v=lP8mv3H5qdQ">
 										<span class="icon-play"></span>
 									</a>
@@ -1129,6 +1129,12 @@
 		i.src="https://cdn.curator.io/published/0610ac6d-8ab3-4fc3-b13a-1d49484151b5.js";
 		e=d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
 		})();
+		
+		$(document).ready(function() {
+			setTimeout(function() {
+				$('#promo-play').css('opacity', '1');
+			}, 2000);
+		});
 	</script>
 
 </body>
