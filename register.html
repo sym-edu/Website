@@ -309,9 +309,15 @@
 		var loadCounter = 0;
 		var loaded = function() {
 			loadCounter += 1;
-			if (loadCounter === 2) {
+			
+			if (loadCounter % 2 === 1) {
+				$("#google-form").attr("height", "2300px");
+				$(window).scrollTo(15,0)
+			}
+			
+			if (loadCounter % 2 === 0) {
 				$("#google-form").attr("height", "500px");
-				$(window).scrollTo(315,0)
+				$(window).scrollTo(15,0)
 			}
 		}
 	</script>
