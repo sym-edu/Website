@@ -2,7 +2,7 @@
 
 // Define some constants
 define( "RECIPIENT_NAME", "Speak Your Mind Website" );
-define( "RECIPIENT_EMAIL", "info@speakyourmindeducation.com" );
+define( "RECIPIENT_EMAIL", "admin@symedu.in" );
 
 // Read the form values
 $success = false;
