@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,13 +37,53 @@
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/zilom.css" />
     <link rel="stylesheet" href="assets/css/zilom-responsive.css" />
+    <style>
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width:100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            transition: ease-in;
+            }
+
+            /* Modal Content/Box */
+        .modal-content {
+            background-color: rgba(255, 255, 255, 0);
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+            height: auto;
+
+            }
+            /* The Close Button */
+        .close {
+            color: #000000;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            transition: ease-out;
+            }
+
+            .close:hover,
+            .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+            }
+    </style>
 </head>
 
 <body>
-
-    <div class="preloader">
-        <img class="preloader__image" width="60" src="assets/images/loader.png" alt="" />
-    </div>
+        <div class="preloader">
+            <img class="preloader__image" width="60" src="assets/images/loader.png" alt="" />
+        </div> 
 
     <!-- /.preloader -->
     <div class="page-wrapper">
@@ -112,16 +153,6 @@
                                         <li><a href="contact.html">Contact</a></li>
                                     </ul>
                                 </div>
-
-                                <div class="right">
-                                    <div class="main-menu__right">
-                                        <div class="main-menu__right-cart-search">
-                                            <div class="main-menu__right-search-box">
-                                                <a href="https://wa.me/+918056024029" class="thm-btn">Join Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </nav>
 
@@ -131,12 +162,11 @@
 
         </header>
 
-
         <div class="stricky-header stricked-menu main-menu">
-            <div class="sticky-header__content">
-
+        <div class="sticky-header__content">
             </div><!-- /.sticky-header__content -->
-        </div><!-- /.stricky-header -->
+            </div><!-- /.stricky-header -->
+
 
     <!--Start Contact Details One-->
     <section class="contact-details-one">
@@ -185,6 +215,7 @@
                 <!--End Single Contact Details One-->
             </div>
         </div>
+        </div>
     </section>
     <!--End Contact Details One-->
 
@@ -202,35 +233,35 @@
                 </div>
                 <div class="col-xl-8 col-lg-8">
                     <div class="contact-page__right">
-                        <form action="assets/inc/sendemail.php" class="comment-one__form contact-form-validated" novalidate="novalidate">
+                        <form action="https://docs.google.com/forms/d/e/1FAIpQLScs5pQBjiUENNEv245YJykWeYNOhQWFpMOg2yZZLdC_LnBBFg/formResponse" method="post">
                             <div class="row">
                                 <div class="col-xl-6 col-lg-6">
                                     <div class="comment-form__input-box">
-                                        <input type="text" placeholder="Your name" name="name">
+                                        <input type="text" id="name" placeholder="Your name" name="entry.627967427">
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6">
                                     <div class="comment-form__input-box">
-                                        <input type="email" placeholder="Email address" name="email">
+                                        <input type="email" id="email" placeholder="Email address" name="entry.991022695">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xl-6 col-lg-6">
                                     <div class="comment-form__input-box">
-                                        <input type="text" placeholder="Phone number" name="phone">
+                                        <input type="text" id="phonenum" placeholder="Phone number" name="entry.1995808663">
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-6">
                                     <div class="comment-form__input-box">
-                                        <input type="email" placeholder="Subject" name="Subject">
+                                        <input type="text" id="subject" placeholder="Subject" name="entry.1735099572">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xl-12 col-lg-12">
                                     <div class="comment-form__input-box">
-                                        <textarea name="message" placeholder="Write message"></textarea>
+                                        <textarea name="entry.1675594862" id="message" placeholder="Write message"></textarea>
                                     </div>
                                     <button type="submit" class="thm-btn comment-form__btn">Send Message</button>
                                 </div>
@@ -241,127 +272,35 @@
             </div>
         </div>
     </section>
+</div>
+</div>
     <!--Contact Page End-->
+<script>
+    var modal = document.getElementById("myModal");
 
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
 
-        <!--Start Footer One-->
-        <footer class="footer-one">
-            <div class="footer-one__bg">
-            </div><!-- /.footer-one__bg -->
-            <div class="footer-one__top">
-                <div class="container">
-                    <div class="row">
-                        <!--Start Footer Widget Column-->
-                        <div class="col-xl-3 col-lg-4 col-md-4 wow animated fadeInUp" data-wow-delay="0.1s">
-                            <div class="footer-widget__column footer-widget__about">
-                                <div class="footer-widget__about-logo">
-                                    <a href="index.html"><img src="assets/images/logo.png" width="120" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End Footer Widget Column-->
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
 
-                        <!--Start Footer Widget Column-->
-                        <div class="col-xl-3 col-lg-4 col-md-4 wow animated fadeInUp" data-wow-delay="0.3s">
-                            <div class="footer-widget__column footer-widget__courses">
-                                <h3 class="footer-widget__title">Courses</h3>
-                                <ul class="footer-widget__courses-list list-unstyled">
-                                    <li><a href="#">Public Speaking</a></li>
-                                    <li><a href="#">Mental Health</a></li>
-                                    <li><a href="#">Civic Literacy</a></li>
-                                    <li><a href="#">Life Skills</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!--End Footer Widget Column-->
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
 
-                        <!--Start Footer Widget Column-->
-                        <div class="col-xl-3 col-lg-6 col-md-6 wow animated fadeInUp" data-wow-delay="0.7s">
-                            <div class="footer-widget__column footer-widget__contact">
-                                <h3 class="footer-widget__title">Address</h3>
-                                <p class="text">No. 24, SS Street, Karamana, Trivandrum – 695002</p>
-                                <p><a href="mailto:admin@symedu.in">admin@symedu.in</a></p>
-                                <p class="phone"><a href="tel:+918056024029">+91 80560 24029</a></p>
-                            </div>
-                        </div>
-                        <!--End Footer Widget Column-->
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
 
-                        <!--Start Footer Widget Column-->
-                        <div class="col-xl-3 col-lg-6 col-md-6 wow animated fadeInUp" data-wow-delay="0.9s">
-                            <div class="footer-widget__column footer-widget__social-links">
-                                <ul class="footer-widget__social-links-list list-unstyled clearfix">
-                                   <li><a href="https://twitter.com/speakurmindedu" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="https://business.facebook.com/Speak-Your-Mind-Education-101531519041596/" target="_blank"><i class="fab fa-facebook"></i></a></li>
-                                    <li><a href="https://www.linkedin.com/company/speak-your-mind-education-llp/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                                    <li><a href="https://www.instagram.com/speakyourmindeducation/"  target="_blank"><i class="fab fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!--End Footer Widget Column-->
-
-                    </div>
-                </div>
-            </div>
-
-            <!--Start Footer One Bottom-->
-            <div class="footer-one__bottom">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="footer-one__bottom-inner">
-                                <div class="footer-one__bottom-text text-center">
-                                    <p>&copy; Copyright 2022 by www.speakyourmind.com</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--End Footer One Bottom-->
-        </footer>
-        <!--End Footer One-->
-
-    </div><!-- /.page-wrapper -->
-
-    <div class="mobile-nav__wrapper">
-        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
-        <!-- /.mobile-nav__overlay -->
-        <div class="mobile-nav__content">
-            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
-
-            <div class="logo-box">
-                <a href="index.html" aria-label="logo image"><img src="assets/images/logo.png" width="155" alt="" /></a>
-            </div>
-            <!-- /.logo-box -->
-            <div class="mobile-nav__container"></div>
-            <!-- /.mobile-nav__container -->
-
-            <ul class="mobile-nav__contact list-unstyled">
-                
-                <li>
-                    <i class="icon-letter"></i>
-                    <a href="tel:+918056024029">+91 80560 24029</a>
-                </li>
-				
-				<li>
-                    <i class="icon-whatsapp"></i>
-                    <a href="https://wa.me/+918056024029" target="_blank">WhatsApp Us</a>
-                </li>
-            </ul><!-- /.mobile-nav__contact -->
-            <div class="mobile-nav__top">
-                <div class="mobile-nav__social">
-                    <li><a href="https://twitter.com/speakurmindedu" target="_blank"><i class="fab fa-twitter"></i></a></li>
-					<li><a href="https://business.facebook.com/Speak-Your-Mind-Education-101531519041596/" target="_blank"><i class="fab fa-facebook"></i></a></li>
-					<li><a href="https://www.linkedin.com/company/speak-your-mind-education-llp/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-					<li><a href="https://www.instagram.com/speakyourmindeducation/"  target="_blank"><i class="fab fa-instagram"></i></a></li>
-                </div><!-- /.mobile-nav__social -->
-            </div><!-- /.mobile-nav__top -->
-        </div>
-        <!-- /.mobile-nav__content -->
-    </div>
-    <!-- /.mobile-nav__wrapper -->
-
-
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+    </script>
 
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
 
