@@ -40,40 +40,67 @@
     <style>
         .modal {
             display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1; /* Sit on top */
-            left: 0;
-            top: 0;
-            width:100%; /* Full width */
-            height: 100%; /* Full height */
+            position: fixed; 
+            padding: 25px;
             overflow: auto; /* Enable scroll if needed */
-            background-color: rgb(0,0,0); /* Fallback color */
+            margin-left: 30%;
+            margin-top: 30%;
+            margin-bottom: 30%;
+            margin-right: 30%;
+            transform: translate(-25%, -52%);
+            z-index: 999; /*Sit on top
+            width: 70%; 
+            height: 70%; 
+            position: absolute;
+            left: 50%; 
+            top: 50%; 
+            margin-left: -150px;
+            margin-top: -150px;*/
+            width: 77%;
+            height: 80%;
+            /* left: 50%; */
+            /* top: 50%; */
+            /* width:60%; Full width */
+            /* height: 60%; Full height */
+            background-color: rgba(0, 0, 0, 0); /* Fallback color */
             background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-            transition: ease-in;
+            transition: ease-in-out;
             }
 
             /* Modal Content/Box */
         .modal-content {
             background-color: rgba(255, 255, 255, 0);
-            margin: 15% auto; /* 15% from the top and centered */
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%; /* Could be more or less, depending on screen size */
-            height: auto;
+            /* margin: 15% auto; 15% from the top and centered */
+            padding: 0px;
+            border: 1px solid #ffffff00;
+            width: 100%; /*Could be more or less, depending on screen size */
+            height: 100%;
+            }
+        .modal-button {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            }
 
+        .modal-button:hover {
+            background-color: yellow;
+            cursor: pointer;
             }
             /* The Close Button */
         .close {
-            color: #000000;
-            float: right;
-            font-size: 28px;
+            color: #ffff00;
+            float: left;
+            font-size: 40px;
             font-weight: bold;
             transition: ease-out;
             }
 
             .close:hover,
             .close:focus {
-            color: black;
+            color: rgb(0, 0, 0);
             text-decoration: none;
             cursor: pointer;
             }
